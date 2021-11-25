@@ -1,110 +1,70 @@
-[![Sync labels](https://github.com/ccppoo/OpenTemplate/actions/workflows/label-sync.yml/badge.svg)](https://github.com/ccppoo/OpenTemplate/actions/workflows/label-sync.yml) [![GitHub Actions Demo](https://github.com/ccppoo/OpenTemplate/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/ccppoo/OpenTemplate/actions/workflows/github-actions-demo.yml)[![CI](https://github.com/ccppoo/OpenTemplate/actions/workflows/main.yml/badge.svg)](https://github.com/ccppoo/OpenTemplate/actions/workflows/main.yml)
+[![Sync labels](https://github.com/KNET-KWU/Python-QnA/actions/workflows/label-sync.yml/badge.svg)](https://github.com/KNET-KWU/Python-QnA/actions/workflows/label-sync.yml)
 
-# Open Template
+# Python QnA
 
-Github 템플릿
+Python에 관련된 질문을 하고 해결한 문제를 정리하여 기록을 남기는 레포지토리입니다!
 
-Reference :
+## 질문, 문제 해결의 절차
 
-- [github/docs(repo)](https://github.com/github/docs)
+### 1. issue를 통해 글을 작성합니다
 
-- [github docs](https://docs.github.com/en)
+- 정해진 템플릿에 따라 질문할 내용을 작성합니다.
 
-## For maintainers, 레포지토리 관리자에게
+  반드시 본인의 질문을 답변자가 이해할 수 있도록
 
-아래 항목 중에서 필요한 내용은 관리자분께서 필요에 따라 수정하시면 됩니다.
+  필요한 정보, 모르는 경우 템플릿이 요구하는 자료를 작성합니다.
 
-사용하지 않는 기능은 삭제하시면 됩니다!
+  질문, 문제가 발생한 코드와 함께 첨부하고
+  Python 코드를 첨부할 경우, 가독성을 위해서 반드시
 
-초기 세팅 이후 현재 읽고 있는 `README.md` 파일은 새로운 내용으로 채우시면 됩니다!
+  백틱(backticks)을 이용해 하이라이팅 해주세요
 
-- 📁 `.github`
+````
+```python
+# 이렇게 작성해 주세요
+```
+````
 
-  - 📁 `ISSUE_TEMPLATE` Issue Template, 이슈 템플릿
+그래야 아래와 같이 이쁘게 보입니다.
 
-    - 📜 `config.yml` - Issue config, 이슈 구성 파일
+```python
+def main():
+  print("Hello World!")
 
-    - 📜 `<issue_name>.md` - 개별 이슈 MarkDown 템플릿
+if __name__ == '__main__':
+  main()
+```
 
-    - 📜 `<issue_name>.yaml` - 개별 이슈 YAML 템플릿
+### 2. 질문, 문제가 해결 된 경우 반드시 문서화를 합니다
 
-  - 📁 `workflows` Github Action 관리하는 파일
+여러분이 마주친 문제는 다른 사람들 또한 마주칠 가능성이 매우 높습니다.
 
-    - 📜 `main.yml` - 기본 Github Action
+질문을 한 개인의 입장에서는 **한번**이지만
 
-- 📜 `PULL_REQUEST_TEMPLATE.md` - PR 템플릿
+답변을 해주는 입장에서는 **똑같은 답변을 반복**하는 것과 같습니다!
 
-- 📜 `README.md` - 현재 읽고 있는 이 파일
+반드시 질문/문제 발생부터 해결까지 과정을 짧게 작성해주세요!
 
-- 📜 `LICENSE` - 라이선스
+## 질문, 문제의 의미
 
-- 📜 `.gitattributes` - 깃 설정
+엄격히 구분하는 것은 아니며, 혼동을 줄이기 위해 작성된 내용입니다.
 
----
+**질문**의 경우
 
-### Issue Template, 이슈 템플릿
+```
+  내가 이해했을 때는 `A → B, B → C` 그래서 `A → C` 라고 생각했는데
 
-- **config.yml**
+  왜 `A → F`라는 결과가 나오는 거지?
+```
 
-issue를 작성하기 전에 탬플릿을 고르는 화면에 나오는 내용입니다.
+처럼 문제를 해결하기 위한 접근 방법이 존재했으나 제대로 실행이 되지 않은 상태입니다.
 
-여기서 템플릿을 꼭 선택해도록 설정해도, 템플릿을 지울 수 있습니다! 🤬
+어느정도 문제 해결을 하기 위한 기반 지식이 있는 경우를 말 합니다.
 
-템플릿을 강제하고 싶은 경우 마크다운 템플릿 대신 YAML 템플릿을 사용해보세요!
-`blank_issues_enabled: false -> true`
+**문제**의 경우
 
-- **example1.md**
+```
+  이거를 대체 어디서부터 접근을 해야되는 걸까?
+```
 
-마크다운 형식의 issue 템플릿입니다.
-
-기존의 issue에 마크다운이 대신 작성된 것으로 자유롭게 편집이 가능하나
-
-결국 사용자가 지우면 템플릿이 템플릿 노릇을 못하게 됩니다. 😒
-
-- **example2.yaml**
-
-Yaml 형식의 issue 템플릿입니다.
-
-issue 템플릿을 강제할 수 있으며, 다른 한편으로 작성하기 쉬울 수 있습니다. 😀
-
-템플릿의 강제성은 편리할 수 있으나, 작성자의 입장에서 불편할 수 있습니다.
-
-모든 템플릿을 yaml 형식으로 할 경우 혹시 모를 자유로운 영혼을 위해 `blank_issues_enabled: false`를 지정해 주세요!
-
----
-
-### WorkFlow - with Github Action
-
-Workflow의 경우 직접 `.yml` 파일을 직접 작성하는 것보다 웹 페이지 상에서 추가하는 것이 간단합니다.
-
-![Work flow guide](./images/openTemplate_new_workflow.PNG)
-
-`.yml` 파일 하나에는 여러 작업이 정의되어 있을 수 있고, 파일 이름은 작업과 상관이 없습니다.
-
-- main.yml, github-actions-demo.yml
-
-[Gthub Action 샘플 코드](https://docs.github.com/en/actions/quickstart)와 `.yml` 파일을 통해 어떻게 메타데이터를 사용할 수 있는지에 대한 예시입니다.
-
-- labels.yml
-
-[label-syncer](https://github.com/marketplace/actions/label-syncer)
-
-`.yml` 파일에 저장한 레이블을 동기화 시켜주는 Github Action 입니다.
-
-[Github MarketPlace](https://github.com/marketplace?category=&query=&type=actions&verification=)를 통해 다양한 자동화 작업을 이용해보세요!
-
----
-
-### PR Template, PR 템플릿
-
-- **PULL_REQUEST_TEMPLATE.md**
-
-PR을 요청할 때 생기는 마크다운 형식의 탬플릿 입니다.
-
-issue와 달리 yaml 형식의 템플릿은 아직 없습니다.
-
----
-
-### Contribute
-
-컨트리뷰트는 언제나 열려있습니다
+처럼 문제 해결하기 위한 논리의 과정 자체가 아예 없는 상태라고 보실 수 있습니다.
