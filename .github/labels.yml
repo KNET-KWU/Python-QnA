@@ -1,43 +1,61 @@
 - color: d73a4a
-  description: Something isn't working
+  description: 버그.
   name: 🐞 Bug
 - color: fc3232
-  description: Something to ask
+  description: 질문
   name: ❓ Question
-- color: fafafa
-  description: Issues that need ideas, opinions
-  name: 💬 Need Opinions
 - color: ff0000
-  description: Spam
+  description: 유사한 질문에 대한 답변이 있거나, 솔루션이 이미 존재. 반복하는 경우도 해당됨.
   name: 🚨 Spam
+- color: 44DC84
+  description: 레포지토리 혹은 더 나은 개선사항이 있는 issue
+  name: 👍 Improvement
 
-# README.md, YML, config, image files
-- color: eb4646
-  description: about README.md
-  name: 📕 README.md
-- color: 21e5ff
-  description: about workflow files
-  name: 🌊 Workflows
+# Shortage
+- color: F5F28F
+  description: 문제를 해결하기 위한 정보가 부족합니다
+  name: 🤔 Need More Details
 - color: 16fa31
-  description: about image files
-  name: 🖼️ Images
+  description: 문제에 대한 사진이 첨부된 정보가 필요합니다.
+  name: 🖼️ Need Images
+- color: 15B1FA
+  description: 스크린샷이 아닌 텍스트로 된 정보가 필요합니다.
+  name: 📝 Image -> Text
+
+# About Questions
+- color: 6F7287
+  description: 공식 문서를 통해 해결 가능한 문제입니다.
+  name: 📕 READ DOCUMENTAION!
+- color: 90EDFD
+  description: 파이썬 기본 라이브러리에 대한 문제입니다.
+  name: 📚 Python Standard Library
+
+# About Problems
+- color: 2AF38C
+  description: 프로그램을 실행하는 환경에 대한 문제입니다.
+  name: 💻 Settings
+- color: C7A6CC
+  description: 프로그램을 실행하는 IDE(편집기) 대한 문제입니다.
+  name: 🔠 IDE
+
+# General
+- color: F0DD73
+  description: 프로그래밍 언어 문법에 대한 문제입니다.
+  name: 🐍 Python Grammar
+- color: 21e5ff
+  description: 문제 파악을 위한 정보가 충분하고 답변이 진행중입니다.
+  name: 🌊 Working in Progress
+
+# Solved or not solved, need documentation
+- color: 64F0A5
+  description: 문제가 해결되었습니다.
+  name: ✔️ Solved
+- color: D5C8A4
+  description: 문제를 해결하지 못했습니다.
+  name: ❌ Not Solved
+- color: fafafa
+  description: 다른 해결 방안이 있을 수 있습니다.
+  name: 💬 Need More Opinions
 - color: fff821
-  description: about config files
-  name: 🛠️ Config
-
-# Priority
-- color: ff0000
-  description: Priority Level 4
-  name: ❤️ Priority#1
-
-- color: ff8800
-  description: Priority Level 3
-  name: 🧡 Priority#2
-
-- color: 00ff11
-  description: Priority Level 2
-  name: 💚 Priority#3
-
-- color: 00d5ff
-  description: Priority Level 1
-  name: 💙 Priority#4
+  description: 비슷한 문제를 접근하는 사람들을 위해 문서화 할 단계입니다.
+  name: 📘 Need Documentation
