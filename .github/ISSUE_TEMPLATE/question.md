@@ -1,5 +1,5 @@
 ---
-name: 질문(자유)
+name: 질문하기(마크다운 형태, 자유)
 about: 같은 질문 템플릿이나 정해진 형식이 없습니다.
 labels: ❓ Question
 assignees:
