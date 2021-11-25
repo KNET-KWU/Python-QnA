@@ -1,0 +1,64 @@
+name: 질문
+description: Python에 대해서 몰어보고 싶거나, 이해가 안 되는 내용을 올립니다.
+title: ""
+labels: [❓ Question]
+body:
+  - type: checkboxes
+    attributes:
+      label: 이 문제와 관련된 다른 이슈가 있었나요?
+      description: 발생한 문제에 대해서 구글링 또는 이미 작성된 이슈에 대해 찾아보세요
+      options:
+        - label: 관련된 이슈에 대해서 찾아봤습니다.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: 현재 상황
+      description: 지금 겪고 있는 문제에 대해서 설명해주세요
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 기대했던 결과
+      description: 문제가 발생하지 않았더라면 나왔을 결과에 대해서 설명해주세요
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 발생한 문제를 다시 구현할 수 있도록 절차를 알려주세요, 혹은 코드를 작성해주세요
+      description: 문제가 일어났던 절차를 알려주면 원인해결에 큰 도움이 됩니다.
+      placeholder: |
+        1. 이 코드를 작성하고
+        2. python helloworld.py를 커맨드 창에 작성..
+        3. Run '...'
+        4. See error...
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 개발 환경
+      description: |
+        예시:
+          - **OS**: Windows 10
+          - **Python** : 3.8
+          - **Pypy**: 3.8
+      value: |
+        - OS:
+        - Python:
+        지우거나 추가로 작성할 수 있습니다.
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 추가로 문제에 대해서 작성할 내용이 있나요?
+      description: |
+        실행한 코드가 블로그에서 참고하거나, 다른 레포지토리의 경우 링크를 첨부해주세요
+
+        여기에 사진 파일, 로그 파일을 드래그 & 드롭해도 첨부됩니다.
+    validations:
+      required: false
